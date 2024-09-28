@@ -29,11 +29,10 @@ const App = () => {
     <div>
       {/* Do not remove the main div */}
       <form onSubmit={handleSubmit}>
-
         {fields.map((field, index) => (
           <div key={index} className="field-container">
-            <input type='text' id='name' placeholder="Name" value={field.name} onChange={(e)=>{handleName(index,e)}} required></input>
-            <input type='number' id='age' placeholder="Age" value={field.age} onChange={(e)=>{handleAge(index,e)}} required></input>
+            <input type='text' name='name' placeholder="Name" value={field.name} onChange={(e)=>{handleName(index,e)}} required></input>
+            <input type='number' name='age' placeholder="Age" value={field.age} onChange={(e)=>{handleAge(index,e)}} required></input>
             <button type="button" onClick={()=>{removeField(index)}}>Remove</button>
           </div>
         ))}
